@@ -1,0 +1,118 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gatewayapi-svc
+  labels:
+    app: gatewayapi
+spec:
+  type: NodePort
+  ports:
+    - name: "8080"
+      port: 8080
+      nodePort: 30080
+  selector:
+    app: gatewayapi
+status:
+  loadBalancer: {}
+---
+# service identity
+apiVersion: v1
+kind: Service
+metadata:
+  name: identity
+  labels:
+    app: identity
+spec:
+  ports:
+    - name: "5001"
+      port: 5001
+      targetPort: 5001
+  selector:
+    app: identity
+status:
+  loadBalancer: {}
+---
+# service ordering
+apiVersion: v1
+kind: Service
+metadata:
+  name: ordering
+  labels:
+    app: ordering
+spec:
+  ports:
+    - name: "8080"
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: ordering
+status:
+  loadBalancer: {}
+---
+# service basketapi
+apiVersion: v1
+kind: Service
+metadata:
+  name: basketapi
+  labels:
+    app: basketapi
+spec:
+  ports:
+    - name: "8080"
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: basketapi
+status:
+  loadBalancer: {}
+---
+# service catalog
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalog
+  labels:
+    app: catalog
+spec:
+  ports:
+    - name: "8080"
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: catalog
+status:
+  loadBalancer: {}
+---
+# service marketing
+apiVersion: v1
+kind: Service
+metadata:
+  name: marketing
+  labels:
+    app: marketing
+spec:
+  ports:
+    - name: "8080"
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: marketing
+status:
+  loadBalancer: {}
+---
+# service locationsapi
+apiVersion: v1
+kind: Service
+metadata:
+  name: locationsapi
+  labels:
+    app: locationsapi
+spec:
+  ports:
+    - name: "80"
+      port: 80
+      targetPort: 80
+  selector:
+    app: locationsapi
+status:
+  loadBalancer: {}

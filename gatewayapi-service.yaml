@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gatewayapi-svc
+  labels:
+    app: gatewayapi
+spec:
+  type: NodePort
+  ports:
+    - name: "8080"
+      port: 8080
+      nodePort: 30080
+  selector:
+    app: gatewayapi
+status:
+  loadBalancer: {}

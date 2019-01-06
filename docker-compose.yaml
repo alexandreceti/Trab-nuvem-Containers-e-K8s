@@ -1,0 +1,44 @@
+version: "3"
+services:
+  gateway:
+      image: alexandreceti/gatewayapi
+      ports:
+        - "8080:8080"
+      links:
+        - "identity"
+        - "ordering"
+        - "basketapi"
+        - "catalog"
+        - "marketing"
+        - "locationsapi"
+      depends_on:
+        - identity
+        - ordering
+        - basketapi
+        - catalog
+        - marketing
+        - locationsapi
+  identity:
+      image: alexandreceti/identity
+#      ports:
+#        - "8086:5001"
+  ordering:
+      image: alexandreceti/ordering
+#      ports:
+#        - "8081:8080"
+  basketapi:
+      image: alexandreceti/basketapi
+#      ports:
+#        - "8082:8080"
+  catalog:
+      image: alexandreceti/catalog
+#      ports:
+#        - "8083:8080"
+  marketing:
+      image: alexandreceti/marketing
+#      ports:
+#        - "8084:8080"
+  locationsapi:
+      image: alexandreceti/locationsapi
+#      ports:
+#        - "8085:80"

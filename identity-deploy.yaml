@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: identity
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: identity
+    spec:
+      containers:
+      - name: identity
+        image: alexandreceti/identity
+        ports:
+        - containerPort: 5001

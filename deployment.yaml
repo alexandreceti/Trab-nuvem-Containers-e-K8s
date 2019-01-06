@@ -1,0 +1,119 @@
+# Gateway Api - Express gateway 
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: gatewayapi
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gatewayapi
+    spec:
+      containers:
+      - name: gatewayapi
+        image: alexandreceti/gatewayapi
+        ports:
+        - containerPort: 8080
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: identity
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: identity
+    spec:
+      containers:
+      - name: identity
+        image: alexandreceti/identity
+        ports:
+        - containerPort: 5001
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ordering
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ordering
+    spec:
+      containers:
+      - name: ordering
+        image: alexandreceti/ordering
+        ports:
+        - containerPort: 5001
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: basketapi
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: basketapi
+    spec:
+      containers:
+      - name: basketapi
+        image: alexandreceti/basketapi
+        ports:
+        - containerPort: 8080
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: catalog
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: catalog
+    spec:
+      containers:
+      - name: catalog
+        image: alexandreceti/catalog
+        ports:
+        - containerPort: 8080
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: marketing
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: marketing
+    spec:
+      containers:
+      - name: marketing
+        image: alexandreceti/marketing
+        ports:
+        - containerPort: 8080
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: locationsapi
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: locationsapi
+    spec:
+      containers:
+      - name: locationsapi
+        image: alexandreceti/locationsapi
+        ports:
+        - containerPort: 80
