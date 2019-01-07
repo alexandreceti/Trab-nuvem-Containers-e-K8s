@@ -18,7 +18,7 @@ https://hub.docker.com/u/alexandreceti
 Api Source:
 https://github.com/alexandreceti/IdentityApi  
 
-imagem: alexandreceti/identity  
+Imagem: alexandreceti/identity  
 ``` 
 docker run -it --rm --name ident01 -p 5001:5001 alexandreceti/identity
 ```
@@ -39,7 +39,7 @@ http://localhost:30080/IdentityApi/v1/Identity/tokenvalido/1
 Api Source:
 https://github.com/alexandreceti/OrderingApi  
 
-image: alexandreceti/ordering   
+Image: alexandreceti/ordering   
 ```
 docker run -it --rm --name ordering01 -p 8080:8080 alexandreceti/ordering 
 ```
@@ -63,7 +63,7 @@ http://localhost:30081/OrderingApi/v1/orders
 Api Source:
 https://github.com/alexandreceti/BasketApi
 
-image: alexandreceti/basketapi   
+Image: alexandreceti/basketapi   
 ```
 docker run -it --rm --name basket01 -p 8080:8080 alexandreceti/basketapi   
 ```
@@ -87,7 +87,7 @@ http://localhost:30080/basketapi/v1/basket
 Api Source:
 https://github.com/bylucasxdx/CatalogApi
 
-image: alexandreceti/catalog   
+Image: alexandreceti/catalog   
 ```
 docker run -it --rm --name catalog01 -p 8080:8080 alexandreceti/catalog 
 ```
