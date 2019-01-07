@@ -1,9 +1,9 @@
 # Trab-nuvem-Containers-e-K8s
 
-* [Alexandre Cunha C.Oliveira](@alexandreceti)
-* [Henrique franzoni keppel](@HenriqueKeppel)
-* [Lucas Medeiros](@bylucasxdx)
-* [Prince Sanis](@princesanis)
+* [Alexandre Cunha C.Oliveira](https://github.com/alexandreceti)
+* [Henrique franzoni keppel](https://github.com/HenriqueKeppel)
+* [Lucas Medeiros](https://github.com/bylucasxdx)
+* [Prince Sanis](https://github.com/princesanis)
 
 
 Trabalho de Arquitetura em Nuvem.    
